@@ -1,0 +1,40 @@
+{
+  "name": "TorrServer",
+  "slug": "torrserver",
+  "categories": [
+    11
+  ],
+  "date_created": "2025-12-18",
+  "type": "ct",
+  "updateable": true,
+  "privileged": false,
+  "interface_port": 8090,
+  "documentation": "https://github.com/YouROK/TorrServer/wiki",
+  "website": "https://github.com/YouROK/TorrServer",
+  "logo": "https://github.com/YouROK/TorrServer/blob/master/web/public/logo.png",
+  "config_path": "/opt/torrserver/config",
+  "description": "TorrServer is a torrent-to-HTTP proxy that streams video content directly from torrents without needing to download the complete file first. It supports real-time playback with various media players.",
+  "install_methods": [
+    {
+      "type": "default",
+      "script": "ct/torrserver.sh",
+      "resources": {
+        "cpu": 2,
+        "ram": 2048,
+        "hdd": 8,
+        "os": "debian",
+        "version": "12"
+      }
+    }
+  ],
+  "default_credentials": {
+    "username": null,
+    "password": null
+  },
+  "notes": [
+    {
+      "text": "HTTP authentication is disabled by default. Set TS_HTTPAUTH=1 during installation to enable it.",
+      "type": "info"
+    }
+  ]
+}
